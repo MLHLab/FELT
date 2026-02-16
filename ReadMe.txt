@@ -1,0 +1,7 @@
+FELT: Federated Enhanced Language Transformer
+
+This repository contains the reference implementation of FELT (Federated Enhanced Language Transformer), a privacy-preserving federated learning framework for large-scale banking text analytics. FELT is designed to address key challenges in applying large language models (LLMs) within regulated financial environments, including strict data privacy requirements, institutional data silos, and heterogeneous complaint distributions across banks.
+
+The framework combines LLM-based semantic embeddings with federated optimization, enabling multiple financial institutions to collaboratively train robust complaint classification models without sharing raw customer data. FELT is evaluated on large-scale consumer complaint data from the U.S. Consumer Financial Protection Bureau, spanning three core banking products: Checking/Savings Accounts, Credit Cards, and Mortgage Loans. In each setup, the top five institutions act as federated clients, while complaints from hundreds of unseen institutions are used exclusively for testing to assess cross-institutional generalization.
+
+This codebase supports experiments on embedding model selection, neighbourhood optimization, and federated aggregation, with training performed using 10-fold cross-validation and evaluation strictly on held-out test sets. The results demonstrate that FELT consistently outperforms institution-specific models and prompt-based GenAI baselines, achieving strong and statistically significant gains across all banking products.
